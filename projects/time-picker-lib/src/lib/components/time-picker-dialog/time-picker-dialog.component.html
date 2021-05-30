@@ -1,0 +1,51 @@
+<div mat-dialog-content class="my-16" fxLayout="column">
+    <div>
+        <p class="mt-0 text-center">24-hour clock</p>
+    </div>
+    
+    <div fxFlex="100" fxLayout="row">
+        
+        <div fxFlex="50">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <button mat-icon-button (click)="increment('hour')">
+                    <mat-icon class="primary-text-color cursor-pointer">keyboard_arrow_up</mat-icon>
+                </button>
+                <div class="relative-position">
+                    <!-- <span class="time-label-text">{{'HOUR'|translate}}</span> -->
+                    <span class="time-label-text">HOUR</span>
+
+                    <input #hour="ngModel" class="time-input-box" maxlength="2" [(ngModel)]="hours">
+                </div>
+                <button mat-icon-button (click)="decrement('hour')">
+                    <mat-icon class="primary-text-color cursor-pointer">keyboard_arrow_down</mat-icon>
+                </button>
+            </div>
+        </div>
+
+        <div fxFlex="50">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <button mat-icon-button (click)="increment('minute')">
+                    <mat-icon class="primary-text-color cursor-pointer">keyboard_arrow_up</mat-icon>
+                </button>
+                <div class="relative-position">
+                    <!-- <span class="time-label-text">{{'MINUTE'|translate}}</span> -->
+                    <span class="time-label-text">MINUTE</span>
+
+                    <input #minute="ngModel" class="time-input-box" maxlength="2" [(ngModel)]="minutes">
+                </div>
+                <button mat-icon-button (click)="decrement('minute')">
+                    <mat-icon class="primary-text-color cursor-pointer">keyboard_arrow_down</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<div mat-dialog-actions fxLayoutAlign="space-between center">
+    <!-- <button mat-stroked-button mat-dialog-close>{{'CANCEL'|translate}}</button> -->
+    <button mat-stroked-button mat-dialog-close>CANCEL</button>
+
+    <!-- <button mat-raised-button color="primary" cdkFocusInitial (click)="ok()">{{'OK'|translate}}</button> -->
+    <button mat-raised-button color="primary" cdkFocusInitial (click)="ok()">OK</button>
+
+</div>
+

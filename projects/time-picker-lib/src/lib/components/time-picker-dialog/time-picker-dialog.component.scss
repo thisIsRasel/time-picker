@@ -1,0 +1,19 @@
+.time-input-box {
+    height: 50px;
+    width: 80px;
+    border: 1px solid #ddd;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.time-label-text {
+    position: absolute;
+    font-size: 10px;
+    top: -6px;
+    background: white;
+    left: 8px;
+}
+
+.relative-position {
+    position: relative;
+}
