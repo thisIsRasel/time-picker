@@ -94,12 +94,12 @@
 
 <div class="content" role="main">
     <div>
-        <p>{{'Click to Select time'}}</p>
+        <p class="label">{{'Click input box to select time'}}</p>
         <div fxLayout="column">
             <div fxFlex="50" fxLayoutAlign="start start">
                 <mat-form-field appearance="outline" fxFlex="100">
                     <mat-label>Time picker</mat-label>
-                    <input matInput [(ngModel)]="timeStr" [timePicker]="timePicker1" placeholder="{{'hh:mm'}}" readonly required />
+                    <input matInput [(ngModel)]="timeStr" [timePicker]="timePicker1" placeholder="{{'hh:mm'}}" readonly />
                     <app-time-picker #timePicker1 (dateChanged)="changeTime($event)"></app-time-picker>
                 </mat-form-field>
             </div>
