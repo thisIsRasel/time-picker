@@ -99,7 +99,7 @@
             <div fxFlex="50" fxLayoutAlign="start start">
                 <mat-form-field appearance="outline" fxFlex="100">
                     <mat-label>Time picker</mat-label>
-                    <input matInput [timePicker]="timePicker1" placeholder="{{'hh:mm'}}" readonly required />
+                    <input matInput [(ngModel)]="timeStr" [timePicker]="timePicker1" placeholder="{{'hh:mm'}}" readonly required />
                     <app-time-picker #timePicker1 (dateChanged)="changeTime($event)"></app-time-picker>
                 </mat-form-field>
             </div>
